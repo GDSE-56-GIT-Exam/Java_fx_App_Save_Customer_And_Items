@@ -25,7 +25,7 @@ public class AppInitializer extends Application {
 
         try {
 
-        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/supermarket/view/LoginForm.fxml"));
+        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/view/AddCustomerForm.fxml"));
 
         Scene mainScene = new Scene(root);
 
