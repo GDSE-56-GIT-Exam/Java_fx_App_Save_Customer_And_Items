@@ -10,20 +10,20 @@ package lk.ijse.model;
  * @since 10/9/2021
  */
 public class Customer {
-     private String customerID;
-     private String customerName;
-     private String customerAddress;
-     private String city;
-     private String province;
-     private int contact;
+      private String customerID;
+      private String Name;
+      private String Address;
+      private String city;
+      private String province;
+      private int contact;
 
     public Customer() {
     }
 
-    public Customer(String customerID, String customerName, String customerAddress, String city, String province, int contact) {
+    public Customer(String customerID, String name, String address, String city, String province, int contact) {
         this.customerID = customerID;
-        this.customerName = customerName;
-        this.customerAddress = customerAddress;
+        Name = name;
+        Address = address;
         this.city = city;
         this.province = province;
         this.contact = contact;
@@ -37,20 +37,20 @@ public class Customer {
         this.customerID = customerID;
     }
 
-    public String getCustomerName() {
-        return customerName;
+    public String getName() {
+        return Name;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public String getCustomerAddress() {
-        return customerAddress;
+    public String getAddress() {
+        return Address;
     }
 
-    public void setCustomerAddress(String customerAddress) {
-        this.customerAddress = customerAddress;
+    public void setAddress(String address) {
+        Address = address;
     }
 
     public String getCity() {
@@ -81,8 +81,8 @@ public class Customer {
     public String toString() {
         return "Customer{" +
                 "customerID='" + customerID + '\'' +
-                ", customerName='" + customerName + '\'' +
-                ", customerAddress='" + customerAddress + '\'' +
+                ", Name='" + Name + '\'' +
+                ", Address='" + Address + '\'' +
                 ", city='" + city + '\'' +
                 ", province='" + province + '\'' +
                 ", contact=" + contact +
