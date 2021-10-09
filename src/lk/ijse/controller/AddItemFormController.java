@@ -14,6 +14,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
 import lk.ijse.db.DBConnection;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.logging.Level;
@@ -46,13 +47,13 @@ public class AddItemFormController {
 
                 Connection connection = DBConnection.getInstance().getConnection();
 
-                PreparedStatement pstm = connection.prepareStatement("INSERT INTO Product VALUES (?,?,?,?,?,?,?,?)");
+                PreparedStatement pstm = connection.prepareStatement("INSERT INTO Product VALUES (?,?,?,?)");
 
 
                                         pstm.setObject(1, txtItemCode.getText());
                                         pstm.setObject(2, txtDescription.getText());
-                                        pstm.setObject(3, txtQtyOnHand.getText());
-                                        pstm.setObject(4, txtPrice.getText());
+                                        pstm.setObject(3, Integer.parseInt(txtQtyOnHand.getText()));
+                                        pstm.setObject(4, BigDecimal.valueOf(Long.parseLong(txtPrice.getText())));
 
 
 
